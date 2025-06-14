@@ -1,0 +1,8 @@
+- name: Auto Release 🚀
+  uses: Shiro-nn/release-helper@master
+  with:
+    GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    # Настройка ветки и релиза
+    ALLOWED_BRANCH: "main"
+    DRAFT_RELEASE: "false"
+    PRERELEASE: "false"
