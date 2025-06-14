@@ -1,8 +1,13 @@
-- name: Auto Release 🚀
-  uses: Shiro-nn/release-helper@master
-  with:
-    GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-    # Настройка ветки и релиза
-    ALLOWED_BRANCH: "main"
-    DRAFT_RELEASE: "false"
-    PRERELEASE: "false"
+name: Release
+on:
+  push:
+    branches: [main]
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Auto Release
+        uses: Shiro-nn/release-helper@v1
+        with:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
