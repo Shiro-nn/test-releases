@@ -8,6 +8,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Auto Release
-        uses: Shiro-nn/release-helper@v1
+        uses: Shiro-nn/release-helper@master
         with:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
